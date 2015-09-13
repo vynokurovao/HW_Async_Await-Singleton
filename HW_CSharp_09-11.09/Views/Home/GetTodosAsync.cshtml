@@ -1,0 +1,25 @@
+﻿@model HW_CSharp_09_11._09.Models.TodoListModel
+@{
+    ViewBag.Title = "GetTodosAsync";
+}
+
+<h2>GetTodosAsync</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Completed</th>
+    </tr>
+
+    @foreach (var todo in Model.todos)
+    {
+        <tr>
+            <td>@todo.id</td>
+            <td>@todo.title</td>
+            <td>@(todo.completed ? "Completed" : "Not completed")</td>
+        </tr>
+    }
+</table>
+
+
